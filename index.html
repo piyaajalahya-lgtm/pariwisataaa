@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jelajah Indonesia</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f7f2;
+    color: #26352d;
+}
+
+header {
+    background: #164b3b;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #b9e4c9;
+}
+
+.hero {
+    height: 480px;
+    background:
+    linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.5)),
+    url('https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=1400');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.tombol {
+    background: #e3a84c;
+    color: #26352d;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+section {
+    padding: 60px 8%;
+}
+
+.judul {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.judul h2 {
+    font-size: 30px;
+    color: #164b3b;
+    margin-bottom: 10px;
+}
+
+.destinasi {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,.1);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.card .isi {
+    padding: 18px;
+}
+
+.card h3 {
+    color: #164b3b;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.about {
+    background: #e5eee7;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+}
+
+.kontak {
+    text-align: center;
+}
+
+footer {
+    background: #164b3b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+@media(max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 6px;
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Jelajah Indonesia</div>
+
+    <nav>
+        <a href="#beranda">Beranda</a>
+        <a href="#destinasi">Destinasi</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+</header>
+
+<div class="hero" id="beranda">
+    <div>
+        <h1>Jelajahi Keindahan Indonesia</h1>
+        <p>Temukan tempat wisata indah dan menarik di Indonesia.</p>
+        <a href="#destinasi" class="tombol">Jelajahi Sekarang</a>
+    </div>
+</div>
+
+<section id="destinasi">
+    <div class="judul">
+        <h2>Destinasi Wisata</h2>
+        <p>Berbagai tempat indah yang wajib kamu kunjungi.</p>
+    </div>
+
+    <div class="destinasi">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=600">
+            <div class="isi">
+                <h3>Bali</h3>
+                <p>Bali terkenal dengan pantai yang indah, budaya yang menarik, dan pemandangan alamnya.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600">
+            <div class="isi">
+                <h3>Gunung Bromo</h3>
+                <p>Gunung Bromo memiliki pemandangan pegunungan dan matahari terbit yang indah.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?w=600">
+            <div class="isi">
+                <h3>Raja Ampat</h3>
+                <p>Raja Ampat memiliki laut yang jernih dan keindahan bawah laut yang menakjubkan.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600">
+            <div class="isi">
+                <h3>Yogyakarta</h3>
+                <p>Yogyakarta memiliki wisata sejarah, budaya, dan kuliner yang sangat menarik.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="about" id="tentang">
+    <div class="judul">
+        <h2>Tentang Kami</h2>
+    </div>
+
+    <p>
+        Jelajah Indonesia merupakan website informasi pariwisata
+        yang bertujuan memperkenalkan berbagai destinasi wisata
+        di Indonesia. Melalui website ini, pengunjung dapat
+        mengenal keindahan alam dan budaya Indonesia.
+    </p>
+</section>
+
+<section class="kontak" id="kontak">
+    <div class="judul">
+        <h2>Hubungi Kami</h2>
+        <p>Terima kasih telah mengunjungi website Jelajah Indonesia.</p>
+        <p>Email: jelajahindonesia@gmail.com</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Jelajah Indonesia | Website Pariwisata Indonesia</p>
+</footer>
+
+</body>
+</html>
