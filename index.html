@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -22,7 +23,7 @@ body {
 header {
     background: #164b3b;
     color: white;
-    padding: 20px 8%;
+    padding: 20px 7%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,25 +33,24 @@ header {
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 23px;
     font-weight: bold;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 15px;
     font-size: 14px;
 }
 
 nav a:hover {
-    color: #b9e4c9;
+    color: #e3a84c;
 }
 
 .hero {
-    height: 480px;
-    background:
-    linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.5)),
+    height: 450px;
+    background: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.5)),
     url('https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=1400');
     background-size: cover;
     background-position: center;
@@ -59,19 +59,20 @@ nav a:hover {
     align-items: center;
     text-align: center;
     color: white;
+    padding: 20px;
 }
 
 .hero h1 {
-    font-size: 45px;
+    font-size: 42px;
     margin-bottom: 15px;
 }
 
 .hero p {
-    font-size: 17px;
     margin-bottom: 25px;
 }
 
 .tombol {
+    display: inline-block;
     background: #e3a84c;
     color: #26352d;
     padding: 12px 25px;
@@ -90,14 +91,14 @@ section {
 }
 
 .judul h2 {
-    font-size: 30px;
     color: #164b3b;
+    font-size: 29px;
     margin-bottom: 10px;
 }
 
 .destinasi {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
     gap: 25px;
 }
 
@@ -105,12 +106,7 @@ section {
     background: white;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,.1);
-    transition: .3s;
-}
-
-.card:hover {
-    transform: translateY(-7px);
+    box-shadow: 0 4px 12px #00000015;
 }
 
 .card img {
@@ -119,18 +115,86 @@ section {
     object-fit: cover;
 }
 
-.card .isi {
+.isi {
     padding: 18px;
 }
 
-.card h3 {
+.isi h3 {
     color: #164b3b;
     margin-bottom: 10px;
 }
 
-.card p {
+.isi p {
     font-size: 14px;
     line-height: 1.6;
+}
+
+.card button {
+    margin-top: 12px;
+    background: #164b3b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* MAPS */
+.maps {
+    background: #e5eee7;
+}
+
+.maps .card {
+    padding: 20px;
+}
+
+.maps .tombol {
+    margin-top: 15px;
+}
+
+/* PEMESANAN */
+.pemesanan {
+    max-width: 650px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #00000015;
+}
+
+.pemesanan label {
+    display: block;
+    margin: 15px 0 7px;
+    font-weight: bold;
+}
+
+.pemesanan input,
+.pemesanan select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.total {
+    background: #e5eee7;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.pesan {
+    width: 100%;
+    background: #164b3b;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 7px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 .about {
@@ -144,31 +208,33 @@ section {
     margin: auto;
 }
 
-.kontak {
-    text-align: center;
-}
-
 footer {
     background: #164b3b;
     color: white;
     text-align: center;
     padding: 20px;
-    font-size: 14px;
 }
 
-@media(max-width: 600px) {
+@media(max-width:600px) {
     header {
         flex-direction: column;
         gap: 15px;
     }
 
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
     nav a {
-        margin: 0 6px;
+        margin: 0;
         font-size: 12px;
     }
 
     .hero h1 {
-        font-size: 32px;
+        font-size: 30px;
     }
 }
 </style>
@@ -182,32 +248,36 @@ footer {
     <nav>
         <a href="#beranda">Beranda</a>
         <a href="#destinasi">Destinasi</a>
+        <a href="#maps">Maps</a>
+        <a href="#pesan">Pesan Tiket</a>
         <a href="#tentang">Tentang</a>
-        <a href="#kontak">Kontak</a>
     </nav>
 </header>
 
+<!-- BERANDA -->
 <div class="hero" id="beranda">
     <div>
         <h1>Jelajahi Keindahan Indonesia</h1>
-        <p>Temukan tempat wisata indah dan menarik di Indonesia.</p>
+        <p>Temukan wisata terbaik dan pesan tiket perjalananmu!</p>
         <a href="#destinasi" class="tombol">Jelajahi Sekarang</a>
     </div>
 </div>
 
+<!-- DESTINASI -->
 <section id="destinasi">
     <div class="judul">
         <h2>Destinasi Wisata</h2>
-        <p>Berbagai tempat indah yang wajib kamu kunjungi.</p>
+        <p>Pilih tempat wisata favoritmu.</p>
     </div>
 
     <div class="destinasi">
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=600">
+            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600">
             <div class="isi">
                 <h3>Bali</h3>
-                <p>Bali terkenal dengan pantai yang indah, budaya yang menarik, dan pemandangan alamnya.</p>
+                <p>Wisata pantai, budaya, dan pemandangan alam yang indah.</p>
+                <button onclick="pilihWisata('Bali')">Pesan Tiket</button>
             </div>
         </div>
 
@@ -215,7 +285,8 @@ footer {
             <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600">
             <div class="isi">
                 <h3>Gunung Bromo</h3>
-                <p>Gunung Bromo memiliki pemandangan pegunungan dan matahari terbit yang indah.</p>
+                <p>Menikmati keindahan pegunungan dan matahari terbit.</p>
+                <button onclick="pilihWisata('Gunung Bromo')">Pesan Tiket</button>
             </div>
         </div>
 
@@ -223,21 +294,108 @@ footer {
             <img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?w=600">
             <div class="isi">
                 <h3>Raja Ampat</h3>
-                <p>Raja Ampat memiliki laut yang jernih dan keindahan bawah laut yang menakjubkan.</p>
+                <p>Keindahan laut dan pemandangan bawah laut.</p>
+                <button onclick="pilihWisata('Raja Ampat')">Pesan Tiket</button>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600">
+            <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=600">
             <div class="isi">
                 <h3>Yogyakarta</h3>
-                <p>Yogyakarta memiliki wisata sejarah, budaya, dan kuliner yang sangat menarik.</p>
+                <p>Wisata sejarah, budaya, dan kuliner yang menarik.</p>
+                <button onclick="pilihWisata('Yogyakarta')">Pesan Tiket</button>
             </div>
         </div>
 
     </div>
 </section>
 
+<!-- GOOGLE MAPS -->
+<section class="maps" id="maps">
+    <div class="judul">
+        <h2>Lokasi Wisata</h2>
+        <p>Klik tombol untuk melihat lokasi wisata di Google Maps.</p>
+    </div>
+
+    <div class="destinasi">
+
+        <div class="card">
+            <div class="isi">
+                <h3>Bali</h3>
+                <p>Lihat lokasi wisata Bali.</p>
+                <a class="tombol" href="https://www.google.com/maps/search/?api=1&query=Bali+Indonesia" target="_blank">Buka Maps</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="isi">
+                <h3>Gunung Bromo</h3>
+                <p>Lihat lokasi Gunung Bromo.</p>
+                <a class="tombol" href="https://www.google.com/maps/search/?api=1&query=Gunung+Bromo+Indonesia" target="_blank">Buka Maps</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="isi">
+                <h3>Raja Ampat</h3>
+                <p>Lihat lokasi Raja Ampat.</p>
+                <a class="tombol" href="https://www.google.com/maps/search/?api=1&query=Raja+Ampat+Indonesia" target="_blank">Buka Maps</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="isi">
+                <h3>Yogyakarta</h3>
+                <p>Lihat lokasi Yogyakarta.</p>
+                <a class="tombol" href="https://www.google.com/maps/search/?api=1&query=Yogyakarta+Indonesia" target="_blank">Buka Maps</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- PEMESANAN TIKET -->
+<section id="pesan">
+    <div class="judul">
+        <h2>Pemesanan Tiket Wisata</h2>
+        <p>Isi formulir untuk memesan tiket perjalanan.</p>
+    </div>
+
+    <div class="pemesanan">
+        <form onsubmit="pesanTiket(event)">
+
+            <label>Nama Pemesan</label>
+            <input type="text" id="nama" placeholder="Masukkan nama kamu" required>
+
+            <label>Pilih Destinasi</label>
+            <select id="wisata" onchange="hitungTotal()" required>
+                <option value="">-- Pilih Wisata --</option>
+                <option value="Bali">Bali - Rp50.000</option>
+                <option value="Gunung Bromo">Gunung Bromo - Rp75.000</option>
+                <option value="Raja Ampat">Raja Ampat - Rp100.000</option>
+                <option value="Yogyakarta">Yogyakarta - Rp40.000</option>
+            </select>
+
+            <label>Tanggal Kunjungan</label>
+            <input type="date" id="tanggal" required>
+
+            <label>Jumlah Tiket</label>
+            <input type="number" id="jumlah" min="1" value="1" oninput="hitungTotal()" required>
+
+            <div class="total">
+                Total Harga: <span id="total">Rp0</span>
+            </div>
+
+            <button type="submit" class="pesan">
+                Pesan Melalui WhatsApp
+            </button>
+
+        </form>
+    </div>
+</section>
+
+<!-- TENTANG KAMI -->
 <section class="about" id="tentang">
     <div class="judul">
         <h2>Tentang Kami</h2>
@@ -246,22 +404,70 @@ footer {
     <p>
         Jelajah Indonesia merupakan website informasi pariwisata
         yang bertujuan memperkenalkan berbagai destinasi wisata
-        di Indonesia. Melalui website ini, pengunjung dapat
-        mengenal keindahan alam dan budaya Indonesia.
+        di Indonesia. Website ini membantu pengunjung mencari
+        lokasi wisata dan melakukan pemesanan tiket.
     </p>
 </section>
 
-<section class="kontak" id="kontak">
-    <div class="judul">
-        <h2>Hubungi Kami</h2>
-        <p>Terima kasih telah mengunjungi website Jelajah Indonesia.</p>
-        <p>Email: jelajahindonesia@gmail.com</p>
-    </div>
-</section>
-
 <footer>
-    <p>&copy; 2026 Jelajah Indonesia | Website Pariwisata Indonesia</p>
+    <p>&copy; 2026 Jelajah Indonesia | Website Pariwisata</p>
 </footer>
+
+<script>
+
+const harga = {
+    "Bali": 50000,
+    "Gunung Bromo": 75000,
+    "Raja Ampat": 100000,
+    "Yogyakarta": 40000
+};
+
+function hitungTotal() {
+    let wisata = document.getElementById("wisata").value;
+    let jumlah = Number(document.getElementById("jumlah").value);
+
+    let total = (harga[wisata] || 0) * (jumlah > 0 ? jumlah : 0);
+
+    document.getElementById("total").innerText =
+        "Rp" + total.toLocaleString("id-ID");
+}
+
+function pilihWisata(nama) {
+    document.getElementById("wisata").value = nama;
+    hitungTotal();
+
+    document.getElementById("pesan").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+function pesanTiket(event) {
+    event.preventDefault();
+
+    let nama = document.getElementById("nama").value;
+    let wisata = document.getElementById("wisata").value;
+    let tanggal = document.getElementById("tanggal").value;
+    let jumlah = Number(document.getElementById("jumlah").value);
+    let total = harga[wisata] * jumlah;
+
+    let pesan =
+        "Halo, saya ingin memesan tiket wisata.%0A%0A" +
+        "Nama: " + encodeURIComponent(nama) + "%0A" +
+        "Destinasi: " + encodeURIComponent(wisata) + "%0A" +
+        "Tanggal: " + encodeURIComponent(tanggal) + "%0A" +
+        "Jumlah Tiket: " + jumlah + "%0A" +
+        "Total Harga: Rp" + total.toLocaleString("id-ID");
+
+    // Ganti dengan nomor WhatsApp admin
+    let nomorAdmin = "6281233136219";
+
+    window.open(
+        "https://wa.me/" + nomorAdmin + "?text=" + pesan,
+        "_blank"
+    );
+}
+
+</script>
 
 </body>
 </html>
